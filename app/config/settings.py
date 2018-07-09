@@ -28,7 +28,10 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
 
+AUTH_USER_MODEL = 'members.User'
 
+MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
+MEDIA_URL = '/media/'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
@@ -48,6 +51,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'members',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
