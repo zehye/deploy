@@ -4,6 +4,9 @@
 /.static
 /.media
 
+# Project Secrets
+/.secrets
+
 ### Django ###
 *.log
 *.pot
