@@ -15,7 +15,7 @@
 	- `nginx -g 'daemon off;'` <- 이것과 같은 효과가 됨
 
 ### 운영가능한 가상서버(Virtual host)
-
+''
 A, B, C, D, E 5개의 서버정보가 있다면, `sites-available`폴더에 들어있음
 
 ```
