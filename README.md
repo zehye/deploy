@@ -2,6 +2,51 @@
 
 **Web Server** <-> **WSGI** <-> **Web Application**
 
+## Requirements
+
+- Python (3.6)
+- pipenv
+
+### Secrets
+
+#### `.secrets/base.json`
+
+```json
+{
+  "SECRET_KEY": "<Django secret key>"
+}
+```
+
+#### `.secrets/dev.json`
+
+- PostgreSQL을 사용, DATABASES섹션의 설정이 필요
+
+```json
+{
+  "DATABASES": {
+    "default": {
+      "ENGINE": "django.db.backends.postgresql",
+      "HOST": "<host>",
+      "PORT": 5432,
+      "USER": "<user>",
+      "PASSWORD": "<password>",
+      "NAME": "<db name>"
+    }
+  }
+}
+```
+
+## Installation
+
+```
+pipenv install
+pipenv shell
+cd app
+./manage.py runserver
+```
+
+---
+
 ## Nginx
 
 ### 웹 서버 설정
@@ -15,7 +60,7 @@
 	- `nginx -g 'daemon off;'` <- 이것과 같은 효과가 됨
 
 ### 운영가능한 가상서버(Virtual host)
-''
+
 A, B, C, D, E 5개의 서버정보가 있다면, `sites-available`폴더에 들어있음
 
 ```

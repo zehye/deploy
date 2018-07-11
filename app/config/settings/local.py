@@ -20,7 +20,6 @@ MEDIA_URL = '/media/'
 # WSGI
 WSGI_APPLICATION = 'config.wsgi.local.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 DATABASES = {
@@ -31,4 +30,3 @@ DATABASES = {
 }
 
 print(DATABASES)
-
